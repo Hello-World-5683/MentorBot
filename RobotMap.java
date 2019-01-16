@@ -38,6 +38,16 @@ public class RobotMap {
 	// Sonic Sensor
 	public static int sonicsensor = 0;
 
+	// Kinect Camera
+	public static int cam1USB = 0;
+	public static int cam1XRes = 320;
+	public static int cam1YRes = 240;
+	public static int cam1Fps = 4;
+
+	public static int cam2USB = 1;
+	public static int cam2XRes = 320;
+	public static int cam2YRes = 240;
+	public static int cam2Fps = 4;
 	
 //	Driver Station Mapping
 	// Joystick (Can be checked on driver station usb inputs)

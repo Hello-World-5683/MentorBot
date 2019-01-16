@@ -8,6 +8,7 @@
 package frc.robot;
 import frc.robot.subsystems.Mecanum_subsystem;
 import frc.robot.subsystems.UltraSonicSensor_subsystem;
+import frc.robot.subsystems.Vision_subsystem;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
@@ -23,9 +24,10 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  */
 public class Robot extends TimedRobot {
 	public static Mecanum_subsystem MD;
-	public static UltraSonicSensor_subsystem USS;
-	public static OI m_oi;
-
+  public static UltraSonicSensor_subsystem USS;
+  public static Vision_subsystem VSys;
+  public static OI m_oi;
+ 
   Command m_autonomousCommand;
   SendableChooser<Command> m_chooser = new SendableChooser<>();
 
@@ -38,6 +40,7 @@ public class Robot extends TimedRobot {
     m_oi = new OI();
     MD = new Mecanum_subsystem();
     USS = new UltraSonicSensor_subsystem();
+    VSys = new Vision_subsystem();
 
     // chooser.addOption("My Auto", new MyAutoCommand());
     SmartDashboard.putData("Auto mode", m_chooser);

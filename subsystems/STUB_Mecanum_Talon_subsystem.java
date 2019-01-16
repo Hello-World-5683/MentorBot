@@ -7,23 +7,23 @@
 
 package frc.robot.subsystems;
 
-//import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
+import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
 /**
- * Add your docs here.
+ * STUB for 2020 development
+ * Not using this year (2019)...
  */
-public class Mecanum_Talon_subsystem extends Subsystem {
-  // Put methods for controlling this subsystem
-  // here. Call these from Commands.
+public class STUB_Mecanum_Talon_subsystem extends Subsystem {
 
       /*
      * --- [1] Update CAN Device IDs and use WPI_VictorSPX where necessary ------
      */
-    // WPI_TalonSRX _rghtFront = new WPI_TalonSRX(2);
-    // WPI_TalonSRX _rghtFollower = new WPI_TalonSRX(20);
-    // WPI_TalonSRX _leftFront = new WPI_TalonSRX(1);
-    // WPI_TalonSRX _leftFollower = new WPI_TalonSRX(10);
+    //WPI_TalonSRX example = new WPI_TalonSRX(deviceNumber)
+    WPI_TalonSRX _rghtFront = new WPI_TalonSRX(2);
+    WPI_TalonSRX _rghtFollower = new WPI_TalonSRX(20);
+    WPI_TalonSRX _leftFront = new WPI_TalonSRX(1);
+    WPI_TalonSRX _leftFollower = new WPI_TalonSRX(10);
 
   @Override
   public void initDefaultCommand() {

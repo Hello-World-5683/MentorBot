@@ -7,8 +7,11 @@
 
 package frc.robot;
 import frc.robot.commands.ReadUSSDistance_command;
+import frc.robot.commands.ResetCameras_command;
 import frc.robot.commands.ReadNavX_command;
-import frc.robot.controllers.MyExtreme3DPRO_controller;
+import frc.robot.commands.ToggleCameras_command;
+
+
 import frc.robot.controllers.MyXbox_controller;
 //import frc.robot.controllers.MyExtreme3DPRO_controller;
 
@@ -18,8 +21,10 @@ import frc.robot.controllers.MyXbox_controller;
  */
 public class OI extends MyXbox_controller{
   public OI(){
-    //b1().whileHeld(new ReadUSSDistance_command());
-   // b2().whileHeld(new ReadNavX_command());
+    b1().whileHeld(new ReadUSSDistance_command());
+    b2().whileHeld(new ReadNavX_command());
+    b6().whenPressed(new ToggleCameras_command());
+    b7().whenPressed(new ResetCameras_command()); //Back button on XboxController
   }
 }
   //// CREATING BUTTONS
