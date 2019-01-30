@@ -32,8 +32,10 @@ public class RobotMap {
 	public static int m3_rearRight=2;
 	public static int m4_rearLeft=3;
 	
-	// Wench Motor Port
-	public static int m5_wMotor=4;
+	// Wench Motor Device ID
+	public static int m5_wMotor=0;
+	// Intake Motor Device ID
+	public static int m6_intakeMotor=1;
 	
 	// Sonic Sensor
 	public static int sonicsensor = 0;

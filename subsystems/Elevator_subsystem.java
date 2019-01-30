@@ -12,6 +12,8 @@ import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import edu.wpi.first.wpilibj.command.Subsystem;
 /**
+ * Untested bare bones...
+ * 
  * Elevator subsytem using : 
  * TalonSRX MotorController, VersaPlanetary Integrated Encoder,
  * Motor??******* Fill in details
@@ -34,6 +36,7 @@ public class Elevator_subsystem extends Subsystem {
   //Use in commands (set target rotations)
   public void moveToTarget(double speed, double rotations){
     //speed * ticks/rev * rotations
+    //4096 full rotation
     double targetPos = speed * 4096 * rotations;
     _elevatorMotor.set(ControlMode.MotionMagic, targetPos);
   }
